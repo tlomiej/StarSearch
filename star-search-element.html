@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="star-search-element">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `star-search-element`
+     * StarSearchElement search in one placy from many providers
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class StarSearchElement extends Polymer.Element {
+      static get is() { return 'star-search-element'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'star-search-element'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(StarSearchElement.is, StarSearchElement);
+  </script>
+</dom-module>
