@@ -1,4 +1,7 @@
 <link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../paper-button/paper-button.html">
+
 
 <dom-module id="star-search-element">
   <template>
@@ -8,6 +11,8 @@
       }
     </style>
     <h2>Hello [[prop1]]!</h2>
+    <paper-input class="searchString" label="Enter adress" value={{searchString}}></paper-input>
+    <paper-button raised class="indigo" on-tap="_startSearch">Search</paper-button>
   </template>
 
   <script>
@@ -26,8 +31,16 @@
           prop1: {
             type: String,
             value: 'star-search-element'
-          }
+          },
+          searchString:
+          {
+            type: String,
+            value: ''}
         };
+      }
+
+      _startSearch(){
+        alert(this.searchString)
       }
     }
 
